@@ -105,6 +105,12 @@
          argscheck.checkArgs('O', 'AppsFlyer.generateInviteLink', arguments);
          exec(successCB, errorCB, "AppsFlyerPlugin", "generateInviteLink", [args]);
          };
+        
+         //Appsfyter add reister Uninstasll method
+         AppsFlyer.prototype.registerUninstall = function (token) {
+            argscheck.checkArgs('S', 'AppsFlyer.registerUninstall', arguments);
+            exec(null, null, "AppsFlyerPlugin", "registerUninstall", [token]);
+        };
      
          //CROSS PROMOTION
          AppsFlyer.prototype.trackCrossPromotionImpression = function (appId, campaign) {
